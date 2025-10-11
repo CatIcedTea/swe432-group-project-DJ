@@ -1,0 +1,212 @@
+.dj-main {
+  padding: 1em;
+}
+
+.dj-header {
+  font-size: xx-large;
+  padding: 1em;
+  color: white;
+  background-color: #589bd1;
+
+  border-style: outset;
+  border-color: black;
+}
+
+.dj-grid {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-template-rows: auto auto;
+  gap: 2em;
+}
+
+.dj-add-song-grid {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 0.5fr;
+  grid-template-rows: auto auto;
+  gap: 2em;
+}
+
+.dj-add-song-form {
+  padding: 1em;
+  background-color: #84bae4;
+}
+
+.dj-add-song-button-grid {
+  padding: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3em;
+}
+
+.dj-calender {
+  text-align: center;
+  border-width: 2px;
+}
+
+.dj-calender-month {
+  background-color: #1c3769;
+  color: white;
+  padding: 1em;
+  border-top-right-radius: 25px;
+}
+
+.dj-calender-weekdays {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding: 0.25em;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+}
+
+.dj-calender-weekdays .weekday {
+}
+
+.dj-calender-dates {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+
+  margin-top: -2px;
+}
+
+.dj-calender-dates .date {
+  width: 100%;
+  aspect-ratio: 1;
+
+  border-bottom: solid darkgray 1px;
+  border-right: solid darkgray 1px;
+
+  line-height: 200%;
+
+  padding: 0.25em;
+
+  transition-duration: 0.1s;
+}
+
+.dj-calender-dates .date:hover {
+  background-color: #e0e0e0;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.dj-calender-dates .date:active {
+  background-color: #c7c7c7;
+}
+
+.dj-calender-dates .date-selected {
+  width: 100%;
+  aspect-ratio: 1;
+
+  border-bottom: solid darkgray 1px;
+  border-right: solid darkgray 1px;
+
+  line-height: 200%;
+
+  padding: 0.25em;
+
+  transition-duration: 0.1s;
+
+  background-color: #a1d6ff;
+}
+
+.dj-calender-dates .date-selected:hover {
+  background-color: #bce2ff;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.dj-calender-dates .date-selected:active {
+  background-color: #a3cbe9;
+}
+
+.dj-list-header {
+  background-color: #1c3769;
+  color: white;
+  padding: 0.5em;
+  font-size: x-large;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  border-top-right-radius: 25px;
+}
+
+.dj-list {
+  overflow-y: scroll;
+
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+
+  height: 20em;
+}
+
+.dj-list-item {
+  background-color: #7ab9ec;
+  padding: 0.5em;
+
+  border-width: 2px;
+  border-bottom: solid;
+
+  transition-duration: 0.1s;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 1em;
+}
+
+.dj-list-item:hover {
+  background-color: #a1d6ff;
+  cursor: pointer;
+}
+
+.dj-list-item:active {
+  background-color: #84bae4;
+  cursor: pointer;
+}
+
+.dj-list-button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1em;
+  background-color: #93c4f1;
+
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.dj-list-button {
+  background-color: white;
+
+  padding: 0.5em;
+
+  min-width: 5em;
+
+  border-radius: 5px;
+  border-style: outset;
+  border-width: 1px;
+  border-color: #ececec;
+
+  transition-duration: 0.1s;
+}
+
+.dj-list-button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-1px);
+}
+
+.dj-list-button:active {
+  border-style: inset;
+  background-color: #c7c7c7;
+  transform: translateY(1px);
+}
