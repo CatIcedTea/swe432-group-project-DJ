@@ -23,7 +23,9 @@
       </section>
       <section class="dj-grid">
         <div class="dj-calender">
-          <section class="dj-calender-month">Month<br />YYYY</section>
+          <section id="calenderMonthYear" class="dj-calender-month">
+            Month<br />YYYY
+          </section>
           <section class="dj-calender-weekdays">
             <div>Sun</div>
             <div>Mon</div>
@@ -33,7 +35,7 @@
             <div>Fri</div>
             <div>Sat</div>
           </section>
-          <section class="dj-calender-dates">
+          <section id="calenderDates" class="dj-calender-dates">
             <div class="date">1</div>
             <div class="date">2</div>
             <div class="date">3</div>
@@ -72,7 +74,8 @@
               name="dateSearch"
               id="dateSearch"
               type="date"
-              style="cursor: text" />
+              style="cursor: text"
+              oninput="displayCalender(new Date(value))" />
           </section>
         </div>
         <div>
@@ -114,7 +117,8 @@
                 id="logoutButton"
                 name="logoutButton"
                 value="Log Out"
-                style="cursor: pointer" />
+                style="cursor: pointer"
+                onclick="window.location='../index.html'" />
             </div>
           </section>
         </div>
@@ -126,5 +130,8 @@
         >SWE 432 - Project - Anthony Mejia - Ellis Tran - Tuan Truong</small
       >
     </footer>
+    <script type="module" src="script/calenderScript.js"></script>
+    <script type="module" src="script/timeslotScript.js"></script>
+    <script type="module" src="script/dataManagement.js"></script>
   </body>
 </html>

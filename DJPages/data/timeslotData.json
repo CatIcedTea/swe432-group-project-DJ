@@ -1,0 +1,25 @@
+{
+  "timeslots": [
+    {
+      "timeslotID": 1,
+      "timeStart": "12:00:00 PM",
+      "timeEnd": "1:00:00 PM",
+      "assignedDJ": "Tony Redgrave",
+      "playlistID": 1
+    },
+    {
+      "timeslotID": 2,
+      "timeStart": "1:00:00 PM",
+      "timeEnd": "2:00:00 PM",
+      "assignedDJ": "Jane Doe",
+      "playlistID": 2
+    },
+    {
+      "timeslotID": 1,
+      "timeStart": "2:00:00 PM",
+      "timeEnd": "3:00:00 PM",
+      "assignedDJ": "Jeremy Elbertson",
+      "playlistID": 3
+    }
+  ]
+}

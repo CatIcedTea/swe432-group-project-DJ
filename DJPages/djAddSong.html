@@ -43,22 +43,24 @@
               <label for="trackDurationStart">Track Duration:</label><br />
               <label for="trackDurationMin">Min:</label>
               <input
-                type="time"
+                type="number"
                 id="trackDurationMin"
-                name="trackDurationMin" />
-              -
+                name="trackDurationMin"
+                style="width: 7em" />s -
               <label for="trackDurationMax">Max:</label
               ><input
-                type="time"
+                type="number"
                 id="trackDurationMax"
-                name="trackDurationMax" /><br /><br />
+                name="trackDurationMax"
+                style="width: 7em" />s<br /><br />
               <div class="dj-add-song-button-grid">
                 <input
                   class="dj-list-button"
                   type="button"
                   id="returnButton"
                   name="returnButton"
-                  value="Return" />
+                  value="Return"
+                  onclick="window.location='djPlaylist.html'" />
                 <input
                   class="dj-list-button"
                   type="reset"
@@ -139,5 +141,6 @@
         >SWE 432 - Project - Anthony Mejia - Ellis Tran - Tuan Truong</small
       >
     </footer>
+    <script src="script/addSongScript.js"></script>
   </body>
 </html>
