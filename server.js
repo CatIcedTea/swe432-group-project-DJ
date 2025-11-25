@@ -1,6 +1,13 @@
 var express = require('express');
 var app = express();
+var session = require('express-session');
+
 app.use(express.static('public'));
+app.use(session({
+  secret: 'MySecretCode',
+  saveUninitialized: true,
+  resave: true
+}));
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');

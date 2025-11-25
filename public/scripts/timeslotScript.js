@@ -1,6 +1,6 @@
 import { loadTimeSlotData } from './dataManagement.js';
 import { getSelectedDate } from './calenderScript.js';
-export { displayListHeader };
+export { displayListHeader, displayTimeslots };
 
 const djListHeader = document.querySelector('section.dj-list-header');
 const djList = document.querySelector('section.dj-list');
@@ -44,7 +44,9 @@ Timeslot.prototype.createTimeslotElement = function () {
       element.setAttribute('opened', false);
       preview.remove();
     }*/
-
+    sessionStorage.setItem("DJ Name", this.assignedDJ);
+    sessionStorage.setItem("TimeslotID", this.timeslotID);
+    sessionStorage.setItem("playlistID", this.playlistID);
     window.location = '/dj/playlist';
   });
 
@@ -75,7 +77,15 @@ async function displayTimeslots() {
   djList.textContent = '';
   const timeslotData = await loadTimeSlotData();
 
-  timeslotData.timeslots.forEach((t) => {
+  console.log(getSelectedDate().toISOString().substring(0, 10));
+
+  console.log(timeslotData.timeslot.find(t => t.date == getSelectedDate().toISOString().substring(0, 10)));
+
+  timeslotData.timeslot.find(t => t.date == getSelectedDate().toISOString().substring(0, 10))
+  .timeslots.forEach((t) => {
+    if(t){
+      return;
+    }
     const timeslot = new Timeslot(
       t.timeslotID,
       t.timeStart,
@@ -83,7 +93,6 @@ async function displayTimeslots() {
       t.assignedDJ,
       t.playlistID
     );
-
     djList.appendChild(timeslot.createTimeslotElement());
   });
 }

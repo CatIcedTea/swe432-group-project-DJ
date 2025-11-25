@@ -1,4 +1,4 @@
-import { displayListHeader } from './timeslotScript.js';
+import { displayListHeader, displayTimeslots } from './timeslotScript.js';
 export { getSelectedDate };
 
 const calenderDates = document.getElementById('calenderDates');
@@ -62,6 +62,7 @@ function displayCalender(date) {
   }
 
   displayListHeader();
+  displayTimeslots();
 }
 //Exposes to html
 window.displayCalender = displayCalender;

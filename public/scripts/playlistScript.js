@@ -38,8 +38,18 @@ Track.prototype.createTrackElement = function () {
 };
 
 addEventListener('DOMContentLoaded', function () {
+  displayHeader();
   displayTrack();
 });
+
+function displayHeader(){
+  playlistHeader.textContent = '';
+
+  const nameHeader = document.createElement('div');
+  nameHeader.textContent = sessionStorage.getItem("DJ Name");
+
+  playlistHeader.appendChild(nameHeader);
+}
 
 //Display each track
 async function displayTrack() {
