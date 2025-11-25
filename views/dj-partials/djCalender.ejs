@@ -1,0 +1,25 @@
+<div class="dj-calender">
+  <section id="calenderMonthYear" class="dj-calender-month">
+    Month<br />YYYY
+  </section>
+  <section class="dj-calender-weekdays">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </section>
+  <section id="calenderDates" class="dj-calender-dates"></section>
+  <br />
+  <section>
+    <label for="dateSearch">Date Search: </label>
+    <input
+      name="dateSearch"
+      id="dateSearch"
+      type="date"
+      style="cursor: text"
+      oninput="displayCalender(new Date(value))" />
+  </section>
+</div>

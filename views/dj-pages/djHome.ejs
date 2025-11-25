@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('../partials/head') %> <%- include('../dj-partials/djHead') %>
+    <title>DJ Home</title>
+  </head>
+  <body>
+    <header class="grid-header"><%- include('../partials/header') %></header>
+    <main>
+      <section class="dj-main">
+        <p class="dj-header">Welcome, DJ!</p>
+        <div style="font-size: larger; padding-inline: 1em">
+          Select your timeslot
+        </div>
+      </section>
+      <section class="dj-grid">
+        <%- include('../dj-partials/djCalender') %> <%-
+        include('../dj-partials/djHomeList') %>
+      </section>
+    </main>
+
+    <footer><%- include('../partials/footer') %></footer>
+    <script type="module" src="/scripts/calenderScript.js"></script>
+    <script type="module" src="/scripts/timeslotScript.js"></script>
+    <script type="module" src="/scripts/dataManagement.js"></script>
+  </body>
+</html>
