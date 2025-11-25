@@ -45,7 +45,7 @@ Timeslot.prototype.createTimeslotElement = function () {
       preview.remove();
     }*/
 
-    window.location = '/dj-playlist';
+    window.location = '/dj/playlist';
   });
 
   return element;

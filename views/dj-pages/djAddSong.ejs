@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../groupStyle.css" />
-    <link rel="stylesheet" href="djStyles.css" />
+    <%- include('../partials/head') %> <%- include('../dj-partials/djHead') %>
     <title>Add Song</title>
   </head>
   <body>
     <header class="grid-header">
-      <h1>WAVYFM</h1>
-      <h1>Search</h1>
-      <div class="right">
-        <h1>Settings</h1>
-        <h1>Profile</h1>
-      </div>
+      <%- include('../partials/header') %>
     </header>
     <main>
       <section class="dj-main">
@@ -137,10 +131,8 @@
       </section>
     </main>
     <footer>
-      <small
-        >SWE 432 - Project - Anthony Mejia - Ellis Tran - Tuan Truong</small
-      >
+      <%- include('../partials/footer') %>
     </footer>
-    <script src="script/addSongScript.js"></script>
+    <script src="/scripts/addSongScript.js"></script>
   </body>
 </html>

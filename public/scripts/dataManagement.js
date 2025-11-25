@@ -1,6 +1,6 @@
 //Fetch the currently temporary JSON data for timeslots (WILL NEED LIVE SERVER)
 async function loadTimeSlotData() {
-  const promise = await fetch('./data/timeslotData.json');
+  const promise = await fetch('/data/timeslotData.json');
   const jsonData = await promise.json();
   console.log(jsonData);
 

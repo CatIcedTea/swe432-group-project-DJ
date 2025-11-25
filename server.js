@@ -11,12 +11,16 @@ app.get('/', function (req, res) {
   res.render('pages/index', {});
 });
 
-app.get('/dj-home', function (req, res) {
+app.get('/dj/home', function (req, res) {
   res.render('dj-pages/djHome', {});
 });
 
-app.get('/dj-playlist', function (req, res) {
+app.get('/dj/playlist', function (req, res) {
   res.render('dj-pages/djPlaylist', {});
+});
+
+app.get('/dj/add-song', function (req, res) {
+  res.render('dj-pages/djAddSong', {});
 });
 
 app.listen(8080);
