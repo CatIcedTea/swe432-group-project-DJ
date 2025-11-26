@@ -44,9 +44,12 @@ Timeslot.prototype.createTimeslotElement = function () {
       element.setAttribute('opened', false);
       preview.remove();
     }*/
-    sessionStorage.setItem("DJ Name", this.assignedDJ);
-    sessionStorage.setItem("TimeslotID", this.timeslotID);
-    sessionStorage.setItem("playlistID", this.playlistID);
+    sessionStorage.setItem('TimeslotID', this.timeslotID);
+    sessionStorage.setItem('playlistID', this.playlistID);
+    sessionStorage.setItem(
+      'date',
+      getSelectedDate().toISOString().substring(0, 10)
+    );
     window.location = '/dj/playlist';
   });
 
@@ -55,7 +58,6 @@ Timeslot.prototype.createTimeslotElement = function () {
 
 addEventListener('DOMContentLoaded', function () {
   displayListHeader();
-  displayTimeslots();
 });
 
 //Display the timeslot's header
@@ -77,23 +79,31 @@ async function displayTimeslots() {
   djList.textContent = '';
   const timeslotData = await loadTimeSlotData();
 
-  console.log(getSelectedDate().toISOString().substring(0, 10));
+  console.log(
+    timeslotData.timeslot.find(
+      (t) => t.date == getSelectedDate().toISOString().substring(0, 10)
+    )
+  );
 
-  console.log(timeslotData.timeslot.find(t => t.date == getSelectedDate().toISOString().substring(0, 10)));
+  const data = timeslotData.timeslot.find(
+    (t) => t.date == getSelectedDate().toISOString().substring(0, 10)
+  );
 
-  timeslotData.timeslot.find(t => t.date == getSelectedDate().toISOString().substring(0, 10))
-  .timeslots.forEach((t) => {
-    if(t){
-      return;
+  if (data == undefined) {
+    return;
+  }
+
+  data.timeslots.forEach((t) => {
+    if (t != undefined) {
+      const timeslot = new Timeslot(
+        t.timeslotID,
+        t.timeStart,
+        t.timeEnd,
+        t.assignedDJ,
+        t.playlistID
+      );
+      djList.appendChild(timeslot.createTimeslotElement());
     }
-    const timeslot = new Timeslot(
-      t.timeslotID,
-      t.timeStart,
-      t.timeEnd,
-      t.assignedDJ,
-      t.playlistID
-    );
-    djList.appendChild(timeslot.createTimeslotElement());
   });
 }
 

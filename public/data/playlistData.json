@@ -4,32 +4,33 @@
       "playlistID": 1,
       "playlist": [
         {
-          "trackTitle": "Track Test Title 1",
-          "artistName": "Artist Name1",
-          "albumTitle": "Album Title 1",
-          "yearReleased": "2025",
-          "duration:": "3:00:00"
+          "songID": 1
         },
         {
-          "trackTitle": "Track Test Title 2",
-          "artistName": "Artist Name2",
-          "albumTitle": "Album Title 2",
-          "yearReleased": "2022",
-          "duration:": "2:00:00"
+          "songID": 2
         },
         {
-          "trackTitle": "Track Test Title 3",
-          "artistName": "Artist Name3",
-          "albumTitle": "Album Title 3",
-          "yearReleased": "2021",
-          "duration:": "5:00:00"
+          "songID": 3
         },
         {
-          "trackTitle": "Track Test Title 4",
-          "artistName": "Artist Name4",
-          "albumTitle": "Album Title 4",
-          "yearReleased": "2018",
-          "duration:": "3:00:00"
+          "songID": 4
+        }
+      ]
+    },
+    {
+      "playlistID": 2,
+      "playlist": [
+        {
+          "songID": 5
+        },
+        {
+          "songID": 6
+        },
+        {
+          "songID": 7
+        },
+        {
+          "songID": 8
         }
       ]
     }

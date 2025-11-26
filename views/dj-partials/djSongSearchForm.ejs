@@ -1,0 +1,43 @@
+<form class="dj-add-song-form">
+  <label for="trackTitle">Track Title:</label><br />
+  <input type="text" id="trackTitle" name="trackTitle" /><br /><br />
+  <label for="artistName">Artist Name:</label><br />
+  <input type="text" id="artistName" name="artistName" /><br /><br />
+  <label for="albumTitle">Album Title:</label><br />
+  <input type="text" id="albumTitle" name="albumTitle" /><br /><br />
+  <label for="yearReleased">Year Released:</label><br />
+  <input type="number" id="yearReleased" name="yearReleased" /><br /><br />
+  <label for="trackDurationStart">Track Duration:</label><br />
+  <label for="trackDurationMin">Min:</label>
+  <input
+    type="number"
+    id="trackDurationMin"
+    name="trackDurationMin"
+    style="width: 7em" />s - <label for="trackDurationMax">Max:</label
+  ><input
+    type="number"
+    id="trackDurationMax"
+    name="trackDurationMax"
+    style="width: 7em" />s<br /><br />
+  <div class="dj-add-song-button-grid">
+    <input
+      class="dj-list-button"
+      type="button"
+      id="returnButton"
+      name="returnButton"
+      value="Return"
+      onclick="window.location='/dj/playlist'" />
+    <input
+      class="dj-list-button"
+      type="reset"
+      id="resetButton"
+      name="resetButton"
+      value="Clear" />
+    <input
+      class="dj-list-button"
+      type="submit"
+      id="submitButton"
+      name="submitButton"
+      value="Search" />
+  </div>
+</form>

@@ -134,7 +134,7 @@
   font-size: x-large;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
   border-top-right-radius: 25px;
 }
@@ -151,6 +151,21 @@
 
 .dj-list-item {
   background-color: #7ab9ec;
+  padding: 0.5em;
+
+  border-width: 2px;
+  border-bottom: solid;
+
+  transition-duration: 0.1s;
+
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 1fr;
+
+  gap: 1em;
+}
+
+.dj-list-item-selected {
+  background-color: #c5eaff;
   padding: 0.5em;
 
   border-width: 2px;
